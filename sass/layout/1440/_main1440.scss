@@ -1,0 +1,66 @@
+main{
+    .section-carrusel{
+        @include flex(column, center, center, none);
+        display: flex;
+        .logocarrusel{
+            @include flex(column, center, center, none);
+            display: flex;
+            margin-bottom: 100px;
+            img{
+                width: 500px;
+                height: auto;
+            }
+            button{
+                border: none;
+                padding: 8px 25px;
+                color: map-get($texto, textoSecundario);
+                background-color: map-get($botones, boton);
+                &:hover{
+                    background-color: black;
+                    color: white;
+                    transition: all .5s ease;
+                }
+            }
+        }
+        p{
+            text-align: center;
+            line-height: 1.4em;
+            width: 45.625rem;
+            font-size: 1.5rem;
+        }
+    }
+    .menu{
+        .comidas{
+            section{
+                @include flex(row, center, center, 20px);
+                display: flex;
+                .comida-item{
+                    @include flex(column, flex-end, center, none);
+                    display: flex;
+                    height: 18.75rem;
+                    width: 12.5rem;
+                    background: white;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        background-color: map-get($fondos, nav);
+                        margin-bottom: 5px;
+                    }
+                    button{
+                        border: none;
+                        height: 2.5rem;
+                        width: 6.25rem;
+                        border-radius: .3125rem;
+                        padding: .3125rem .625rem;
+                        color: white;
+                        font-size: 20px;
+                        text-shadow: .125rem .125rem 0px rgba(0, 0, 0, 0.521);
+                        background-color: map-get($botones, botonCard);
+                        margin-bottom: .625rem;
+                    }
+                }
+            }
+        }
+    }
+}
