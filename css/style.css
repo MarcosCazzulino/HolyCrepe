@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #CDB4B4; }
+  background-color: #CDB4B4;
+  height: 100vh; }
 
 a {
   text-decoration: none;
@@ -22,19 +23,21 @@ li {
     font-weight: 400;
     font-style: normal;
     color: #FFC68F;
-    font-size: 18px; }
+    font-size: 18px;
+    text-transform: uppercase; }
     li a:hover {
       color: #D1FEF6; }
 
-h1:hover {
-  transform: scale(1.1);
-  transition: .2s ease; }
-
-h1 a {
-  font-family: "Chela One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFC68F; }
+h1 {
+  font-size: 50px; }
+  h1:hover {
+    transform: scale(1.1);
+    transition: .2s ease; }
+  h1 a {
+    font-family: "Chela One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFC68F; }
 
 h2 {
   text-align: center;
@@ -83,11 +86,12 @@ p {
 
 header {
   width: 100%;
-  height: 3.125rem;
+  height: 5rem;
   background-color: #644E4E;
   position: sticky;
   top: 0;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.25rem;
+  z-index: 1000; }
   header nav {
     display: flex;
     flex-direction: row;
@@ -108,6 +112,8 @@ header {
       gap: 25px;
       display: flex;
       margin: 0; }
+      header nav ul li a .bx {
+        font-size: 40px; }
 
 main .section-carrusel {
   display: flex;
@@ -142,12 +148,16 @@ main .section-carrusel {
     width: 45.625rem;
     font-size: 1.5rem; }
 
+main .menu .subtitulos {
+  font-size: 40px;
+  text-transform: uppercase; }
+
 main .menu .comidas section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   display: flex; }
   main .menu .comidas section .comida-item {
     display: flex;
@@ -156,15 +166,33 @@ main .menu .comidas section {
     align-items: center;
     gap: none;
     display: flex;
-    height: 18.75rem;
-    width: 12.5rem;
+    height: 25rem;
+    width: 16.875rem;
     background: white;
-    overflow: hidden; }
+    overflow: hidden;
+    border: .625rem solid white;
+    margin-bottom: 3.125rem;
+    position: relative; }
+    main .menu .comidas section .comida-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 68%;
+      background-image: linear-gradient(to right, transparent 0%, white);
+      transform: skewX(0.08turn) translateX(-180%); }
+    main .menu .comidas section .comida-item:hover::after, main .menu .comidas section .comida-item:focus-within::after {
+      transform: skew(0.08turn) translateX(275%);
+      transition: 1000ms ease; }
+    main .menu .comidas section .comida-item:hover img {
+      transform: scale(1.1);
+      transition: .1s linear; }
     main .menu .comidas section .comida-item img {
       height: 100%;
       width: 100%;
       background-color: #644E4E;
-      margin-bottom: 5px; }
+      margin-bottom: .625rem; }
     main .menu .comidas section .comida-item button {
       border: none;
       height: 2.5rem;
@@ -174,8 +202,301 @@ main .menu .comidas section {
       color: white;
       font-size: 20px;
       text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
-      background-color: #00BA99;
+      background-color: grey;
       margin-bottom: .625rem; }
+      main .menu .comidas section .comida-item button:hover {
+        background-color: #00BA99;
+        transition: .2s ease; }
+
+main .menu .bebidas section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  display: flex; }
+  main .menu .bebidas section .bebida-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: none;
+    display: flex;
+    height: 25rem;
+    width: 16.875rem;
+    background: white;
+    overflow: hidden;
+    border: .625rem solid white;
+    margin-bottom: 3.125rem;
+    position: relative; }
+    main .menu .bebidas section .bebida-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 68%;
+      background-image: linear-gradient(to right, transparent 0%, white);
+      transform: skewX(0.08turn) translateX(-180%); }
+    main .menu .bebidas section .bebida-item:hover::after, main .menu .bebidas section .bebida-item:focus-within::after {
+      transform: skew(0.08turn) translateX(275%);
+      transition: 1000ms ease; }
+    main .menu .bebidas section .bebida-item:hover img {
+      transform: scale(1.1);
+      transition: .1s linear; }
+    main .menu .bebidas section .bebida-item img {
+      height: 100%;
+      width: 100%;
+      background-color: #644E4E;
+      margin-bottom: .625rem; }
+    main .menu .bebidas section .bebida-item button {
+      border: none;
+      height: 2.5rem;
+      width: 6.25rem;
+      border-radius: .3125rem;
+      padding: .3125rem .625rem;
+      color: white;
+      font-size: 20px;
+      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      background-color: grey;
+      margin-bottom: .625rem; }
+      main .menu .bebidas section .bebida-item button:hover {
+        background-color: #00BA99;
+        transition: .2s ease; }
+
+main .menu .combos section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  display: flex; }
+  main .menu .combos section .combo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: none;
+    display: flex;
+    height: 25rem;
+    width: 16.875rem;
+    background: white;
+    overflow: hidden;
+    border: .625rem solid white;
+    margin-bottom: 3.125rem;
+    position: relative; }
+    main .menu .combos section .combo-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 68%;
+      background-image: linear-gradient(to right, transparent 0%, white);
+      transform: skewX(0.08turn) translateX(-180%); }
+    main .menu .combos section .combo-item:hover::after, main .menu .combos section .combo-item:focus-within::after {
+      transform: skew(0.08turn) translateX(275%);
+      transition: 1000ms ease; }
+    main .menu .combos section .combo-item:hover img {
+      transform: scale(1.1);
+      transition: .1s linear; }
+    main .menu .combos section .combo-item img {
+      height: 100%;
+      width: 100%;
+      background-color: #644E4E;
+      margin-bottom: .625rem; }
+    main .menu .combos section .combo-item button {
+      border: none;
+      height: 2.5rem;
+      width: 6.25rem;
+      border-radius: .3125rem;
+      padding: .3125rem .625rem;
+      color: white;
+      font-size: 20px;
+      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      background-color: grey;
+      margin-bottom: .625rem; }
+      main .menu .combos section .combo-item button:hover {
+        background-color: #00BA99;
+        transition: .2s ease; }
+
+main .menu .ofertas section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  display: flex; }
+  main .menu .ofertas section .oferta-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: none;
+    display: flex;
+    height: 25rem;
+    width: 16.875rem;
+    background: white;
+    overflow: hidden;
+    border: .625rem solid white;
+    margin-bottom: 3.125rem;
+    position: relative; }
+    main .menu .ofertas section .oferta-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 68%;
+      background-image: linear-gradient(to right, transparent 0%, white);
+      transform: skewX(0.08turn) translateX(-180%); }
+    main .menu .ofertas section .oferta-item:hover::after, main .menu .ofertas section .oferta-item:focus-within::after {
+      transform: skew(0.08turn) translateX(275%);
+      transition: 1000ms ease; }
+    main .menu .ofertas section .oferta-item:hover img {
+      transform: scale(1.1);
+      transition: .1s linear; }
+    main .menu .ofertas section .oferta-item img {
+      height: 100%;
+      width: 100%;
+      background-color: #644E4E;
+      margin-bottom: .625rem; }
+    main .menu .ofertas section .oferta-item button {
+      border: none;
+      height: 2.5rem;
+      width: 6.25rem;
+      border-radius: .3125rem;
+      padding: .3125rem .625rem;
+      color: white;
+      font-size: 20px;
+      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      background-color: grey;
+      margin-bottom: .625rem; }
+      main .menu .ofertas section .oferta-item button:hover {
+        background-color: #00BA99;
+        transition: .2s ease; }
+
+main .serv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  margin-bottom: 1.875rem; }
+  main .serv .subtitulos {
+    font-size: 30px;
+    text-transform: uppercase; }
+  main .serv div {
+    width: 95%;
+    font-size: 20px; }
+  main .serv .terminos-y-condiciones {
+    color: #FFC68F;
+    text-shadow: 0px 2px 10px black; }
+
+main .nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none; }
+  main .nosotros .subtitulos {
+    font-size: 30px;
+    text-transform: uppercase; }
+  main .nosotros div {
+    width: 95%;
+    font-size: 20px; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  display: flex;
+  height: 18.75rem;
+  background-color: #644E4E; }
+  footer button {
+    border: none;
+    padding: .3125rem .625rem;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #353535;
+    background-color: #FFC68F;
+    margin-top: 3.125rem; }
+    footer button:hover {
+      transform: scale(1.1);
+      box-shadow: 3px 3px 2px black;
+      background-color: #CDB4B4;
+      color: black;
+      transition: all .2s ease; }
+  footer .ordenamiento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: none;
+    padding: 0 30px 15px 30px;
+    display: flex;
+    width: 100%;
+    height: 100%; }
+    footer .ordenamiento .redes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: none;
+      display: flex;
+      font-size: 20px; }
+      footer .ordenamiento .redes .ig, footer .ordenamiento .redes .twitter, footer .ordenamiento .redes .celular {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: none;
+        display: flex; }
+        footer .ordenamiento .redes .ig a, footer .ordenamiento .redes .twitter a, footer .ordenamiento .redes .celular a {
+          padding-top: .8125rem;
+          color: #FFC68F; }
+          footer .ordenamiento .redes .ig a:hover, footer .ordenamiento .redes .twitter a:hover, footer .ordenamiento .redes .celular a:hover {
+            color: white;
+            text-shadow: .125rem .125rem .625rem black;
+            transition: .2s ease; }
+      footer .ordenamiento .redes .celular p {
+        padding-top: .8125rem;
+        color: #FFC68F; }
+      footer .ordenamiento .redes .bx {
+        color: #FFC68F;
+        font-size: 40px;
+        padding: 0; }
+    footer .ordenamiento .derechos-autor {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: none;
+      display: flex;
+      font-size: 20px;
+      padding-left: 3.75rem;
+      color: white; }
+      footer .ordenamiento .derechos-autor a {
+        color: #FFC68F; }
+        footer .ordenamiento .derechos-autor a:hover {
+          color: white;
+          text-shadow: .125rem .125rem .625rem black;
+          transition: .2s ease; }
+    footer .ordenamiento .horarios {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3125rem;
+      display: flex; }
+      footer .ordenamiento .horarios h5 {
+        font-size: 30px;
+        color: white; }
+      footer .ordenamiento .horarios p {
+        font-size: 20px;
+        color: white; }
 
 .carousel {
   z-index: -1000;

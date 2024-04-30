@@ -5,6 +5,7 @@
 }
 body{
     background-color: map-get($fondos, body);
+    height: 100vh;
 }
 a{
     text-decoration: none;
@@ -24,12 +25,14 @@ li{
         font-style: normal;
         color: map-get($texto, textoSecundario);
         font-size: 18px;
+        text-transform: uppercase;
         &:hover{
             color: map-get($texto, textoHover);
         }
     }
 }
 h1{
+    font-size: 50px;
     &:hover{
         transform: scale(1.1);
         transition: .2s ease;
