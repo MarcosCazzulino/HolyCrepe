@@ -8,7 +8,7 @@ footer{
         padding: .3125rem .625rem;
         font-size: 20px;
         text-transform: uppercase;
-        color: map-get($botones, botonfooter);
+        color: rgba(10, 28, 43, 0.897);
         background-color: map-get($texto, textoSecundario);
         margin-top: 3.125rem;
         &:hover{
@@ -35,11 +35,20 @@ footer{
                 a{
                     padding-top: .8125rem;
                     color: map-get($texto, textoSecundario);
-                    &:hover{
-                        color: white;
-                        text-shadow: .125rem .125rem .625rem black;
-                        transition: .2s ease;
+                    &::selection{
+                        background-color: #FFC68F;
+                        color: #1a1d1c;
                     }
+                }
+                &:hover .bx{
+                    color: white;
+                    text-shadow: .125rem .125rem .625rem black;
+                    transition: .4s ease;
+                }
+                &:hover a{
+                    color: white;
+                    text-shadow: .125rem .125rem .625rem black;
+                    transition: .4s ease;
                 }
             }
             .twitter{
@@ -48,8 +57,14 @@ footer{
             .celular{
                 @extend .ig;
                 p{
+                    @extend a;
                     padding-top: .8125rem;
                     color: map-get($texto, textoSecundario);
+                }
+                &:hover p{
+                    color: white;
+                    text-shadow: .125rem .125rem .625rem black;
+                    transition: .4s ease;
                 }
             }
             .bx{
@@ -64,7 +79,16 @@ footer{
             font-size: 20px;
             padding-left: 3.75rem;
             color: white;
+            h5{
+                width: 21.875rem;
+                text-align: center;
+                &::selection{
+                    background-color: #FFC68F;
+                    color: #1a1d1c;
+                }
+            }
             a{
+                @extend h5;
                 color: map-get($texto, textoSecundario);
                 &:hover{
                     color: white;
@@ -79,8 +103,13 @@ footer{
             h5{
                 font-size: 30px;
                 color: white;
+                &::selection{
+                    background-color: #FFC68F;
+                    color: #1a1d1c;
+                }
             }
             p{
+                @extend h5;
                 font-size: 20px;
                 color: white;
             }

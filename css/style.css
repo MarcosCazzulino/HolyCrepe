@@ -4,10 +4,9 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #CDB4B4;
-  height: 100vh; }
+  background-color: #CDB4B4; }
 
-a {
+a, footer .ordenamiento .redes .celular p {
   text-decoration: none;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -18,14 +17,14 @@ li {
   li:hover {
     transform: scale(1.1);
     transition: 0.2s; }
-  li a {
+  li a, li footer .ordenamiento .redes .celular p, footer .ordenamiento .redes .celular li p {
     font-family: "Chela One", system-ui;
     font-weight: 400;
     font-style: normal;
     color: #FFC68F;
     font-size: 18px;
     text-transform: uppercase; }
-    li a:hover {
+    li a:hover, li footer .ordenamiento .redes .celular p:hover, footer .ordenamiento .redes .celular li p:hover {
       color: #D1FEF6; }
 
 h1 {
@@ -33,7 +32,7 @@ h1 {
   h1:hover {
     transform: scale(1.1);
     transition: .2s ease; }
-  h1 a {
+  h1 a, h1 footer .ordenamiento .redes .celular p, footer .ordenamiento .redes .celular h1 p {
     font-family: "Chela One", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -45,7 +44,9 @@ h2 {
   font-weight: 400;
   font-style: normal;
   color: #FFC68F;
-  text-shadow: 0px 2px 10px black; }
+  text-shadow: 0rem 0.125rem 0.3125rem black; }
+  h2::selection {
+    background-color: #644E4E; }
 
 h3 {
   font-family: "Chela One", system-ui;
@@ -63,17 +64,17 @@ h4 {
     color: white;
     background-color: #644E4E; }
 
-h5 {
+h5, footer .ordenamiento .derechos-autor a, footer .ordenamiento .derechos-autor .redes .celular p, footer .ordenamiento .redes .celular .derechos-autor p, footer .ordenamiento .horarios p {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-style: normal; }
-  h5::selection {
+  h5::selection, footer .ordenamiento .derechos-autor a::selection, footer .ordenamiento .derechos-autor .redes .celular p::selection, footer .ordenamiento .redes .celular .derechos-autor p::selection, footer .ordenamiento .horarios p::selection {
     color: white;
     background-color: #644E4E; }
 
 button {
-  font-family: "Chela One", system-ui;
-  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
   font-style: normal; }
 
 p {
@@ -90,7 +91,6 @@ header {
   background-color: #644E4E;
   position: sticky;
   top: 0;
-  margin-bottom: 1.25rem;
   z-index: 1000; }
   header nav {
     display: flex;
@@ -112,7 +112,7 @@ header {
       gap: 25px;
       display: flex;
       margin: 0; }
-      header nav ul li a .bx {
+      header nav ul li a .bx, header nav ul li footer .ordenamiento .redes .celular p .bx, footer .ordenamiento .redes .celular header nav ul li p .bx {
         font-size: 40px; }
 
 main .section-carrusel {
@@ -129,18 +129,18 @@ main .section-carrusel {
     align-items: center;
     gap: none;
     display: flex;
-    margin-bottom: 100px; }
+    margin-bottom: 6.25rem; }
     main .section-carrusel .logocarrusel img {
-      width: 500px;
+      width: 31.25rem;
       height: auto; }
     main .section-carrusel .logocarrusel button {
       border: none;
-      padding: 8px 25px;
+      padding: .5rem 1.5625rem;
       color: #FFC68F;
       background-color: #644E4E; }
       main .section-carrusel .logocarrusel button:hover {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         transition: all .5s ease; }
   main .section-carrusel p {
     text-align: center;
@@ -196,16 +196,17 @@ main .menu .comidas section {
     main .menu .comidas section .comida-item button {
       border: none;
       height: 2.5rem;
-      width: 6.25rem;
+      width: 7.5rem;
       border-radius: .3125rem;
       padding: .3125rem .625rem;
       color: white;
       font-size: 20px;
-      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      text-transform: uppercase;
       background-color: grey;
       margin-bottom: .625rem; }
       main .menu .comidas section .comida-item button:hover {
         background-color: #00BA99;
+        color: rgba(0, 17, 32, 0.829);
         transition: .2s ease; }
 
 main .menu .bebidas section {
@@ -252,16 +253,17 @@ main .menu .bebidas section {
     main .menu .bebidas section .bebida-item button {
       border: none;
       height: 2.5rem;
-      width: 6.25rem;
+      width: 7.5rem;
       border-radius: .3125rem;
       padding: .3125rem .625rem;
       color: white;
       font-size: 20px;
-      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      text-transform: uppercase;
       background-color: grey;
       margin-bottom: .625rem; }
       main .menu .bebidas section .bebida-item button:hover {
         background-color: #00BA99;
+        color: rgba(0, 17, 32, 0.747);
         transition: .2s ease; }
 
 main .menu .combos section {
@@ -308,16 +310,17 @@ main .menu .combos section {
     main .menu .combos section .combo-item button {
       border: none;
       height: 2.5rem;
-      width: 6.25rem;
+      width: 7.5rem;
       border-radius: .3125rem;
       padding: .3125rem .625rem;
       color: white;
       font-size: 20px;
-      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      text-transform: uppercase;
       background-color: grey;
       margin-bottom: .625rem; }
       main .menu .combos section .combo-item button:hover {
         background-color: #00BA99;
+        color: rgba(0, 17, 32, 0.747);
         transition: .2s ease; }
 
 main .menu .ofertas section {
@@ -364,16 +367,17 @@ main .menu .ofertas section {
     main .menu .ofertas section .oferta-item button {
       border: none;
       height: 2.5rem;
-      width: 6.25rem;
+      width: 7.5rem;
       border-radius: .3125rem;
       padding: .3125rem .625rem;
       color: white;
       font-size: 20px;
-      text-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.521);
+      text-transform: uppercase;
       background-color: grey;
       margin-bottom: .625rem; }
       main .menu .ofertas section .oferta-item button:hover {
         background-color: #00BA99;
+        color: rgba(0, 17, 32, 0.747);
         transition: .2s ease; }
 
 main .serv {
@@ -398,7 +402,9 @@ main .nosotros {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: none; }
+  gap: none;
+  display: flex;
+  margin-bottom: 50px; }
   main .nosotros .subtitulos {
     font-size: 30px;
     text-transform: uppercase; }
@@ -420,7 +426,7 @@ footer {
     padding: .3125rem .625rem;
     font-size: 20px;
     text-transform: uppercase;
-    color: #353535;
+    color: rgba(10, 28, 43, 0.897);
     background-color: #FFC68F;
     margin-top: 3.125rem; }
     footer button:hover {
@@ -454,16 +460,27 @@ footer {
         align-items: center;
         gap: none;
         display: flex; }
-        footer .ordenamiento .redes .ig a, footer .ordenamiento .redes .twitter a, footer .ordenamiento .redes .celular a {
+        footer .ordenamiento .redes .ig a, footer .ordenamiento .redes .twitter a, footer .ordenamiento .redes .celular a, footer .ordenamiento .redes .celular p {
           padding-top: .8125rem;
           color: #FFC68F; }
-          footer .ordenamiento .redes .ig a:hover, footer .ordenamiento .redes .twitter a:hover, footer .ordenamiento .redes .celular a:hover {
-            color: white;
-            text-shadow: .125rem .125rem .625rem black;
-            transition: .2s ease; }
+          footer .ordenamiento .redes .ig a::selection, footer .ordenamiento .redes .twitter a::selection, footer .ordenamiento .redes .celular a::selection, footer .ordenamiento .redes .celular p::selection {
+            background-color: #FFC68F;
+            color: #1a1d1c; }
+        footer .ordenamiento .redes .ig:hover .bx, footer .ordenamiento .redes .twitter:hover .bx, footer .ordenamiento .redes .celular:hover .bx {
+          color: white;
+          text-shadow: .125rem .125rem .625rem black;
+          transition: .4s ease; }
+        footer .ordenamiento .redes .ig:hover a, footer .ordenamiento .redes .twitter:hover a, footer .ordenamiento .redes .celular:hover a, footer .ordenamiento .redes .ig:hover .celular p, footer .ordenamiento .redes .celular .ig:hover p, footer .ordenamiento .redes .twitter:hover .celular p, footer .ordenamiento .redes .celular .twitter:hover p, footer .ordenamiento .redes .celular:hover p {
+          color: white;
+          text-shadow: .125rem .125rem .625rem black;
+          transition: .4s ease; }
       footer .ordenamiento .redes .celular p {
         padding-top: .8125rem;
         color: #FFC68F; }
+      footer .ordenamiento .redes .celular:hover p {
+        color: white;
+        text-shadow: .125rem .125rem .625rem black;
+        transition: .4s ease; }
       footer .ordenamiento .redes .bx {
         color: #FFC68F;
         font-size: 40px;
@@ -478,9 +495,15 @@ footer {
       font-size: 20px;
       padding-left: 3.75rem;
       color: white; }
-      footer .ordenamiento .derechos-autor a {
+      footer .ordenamiento .derechos-autor h5, footer .ordenamiento .derechos-autor a, footer .ordenamiento .derechos-autor .redes .celular p, footer .ordenamiento .redes .celular .derechos-autor p, footer .ordenamiento .derechos-autor .horarios p, footer .ordenamiento .horarios .derechos-autor p {
+        width: 21.875rem;
+        text-align: center; }
+        footer .ordenamiento .derechos-autor h5::selection, footer .ordenamiento .derechos-autor a::selection, footer .ordenamiento .derechos-autor .redes .celular p::selection, footer .ordenamiento .redes .celular .derechos-autor p::selection, footer .ordenamiento .derechos-autor .horarios p::selection, footer .ordenamiento .horarios .derechos-autor p::selection {
+          background-color: #FFC68F;
+          color: #1a1d1c; }
+      footer .ordenamiento .derechos-autor a, footer .ordenamiento .derechos-autor .redes .celular p, footer .ordenamiento .redes .celular .derechos-autor p {
         color: #FFC68F; }
-        footer .ordenamiento .derechos-autor a:hover {
+        footer .ordenamiento .derechos-autor a:hover, footer .ordenamiento .derechos-autor .redes .celular p:hover, footer .ordenamiento .redes .celular .derechos-autor p:hover {
           color: white;
           text-shadow: .125rem .125rem .625rem black;
           transition: .2s ease; }
@@ -491,9 +514,12 @@ footer {
       align-items: center;
       gap: 0.3125rem;
       display: flex; }
-      footer .ordenamiento .horarios h5 {
+      footer .ordenamiento .horarios h5, footer .ordenamiento .horarios .derechos-autor a, footer .ordenamiento .derechos-autor .horarios a, footer .ordenamiento .horarios .derechos-autor .redes .celular p, footer .ordenamiento .derechos-autor .redes .celular .horarios p, footer .ordenamiento .horarios .redes .celular .derechos-autor p, footer .ordenamiento .redes .celular .derechos-autor .horarios p, footer .ordenamiento .horarios p {
         font-size: 30px;
         color: white; }
+        footer .ordenamiento .horarios h5::selection, footer .ordenamiento .horarios .derechos-autor a::selection, footer .ordenamiento .derechos-autor .horarios a::selection, footer .ordenamiento .horarios .derechos-autor .redes .celular p::selection, footer .ordenamiento .derechos-autor .redes .celular .horarios p::selection, footer .ordenamiento .horarios .redes .celular .derechos-autor p::selection, footer .ordenamiento .redes .celular .derechos-autor .horarios p::selection, footer .ordenamiento .horarios p::selection {
+          background-color: #FFC68F;
+          color: #1a1d1c; }
       footer .ordenamiento .horarios p {
         font-size: 20px;
         color: white; }
@@ -501,10 +527,10 @@ footer {
 .carousel {
   z-index: -1000;
   overflow: hidden;
-  height: 32.1875rem;
+  height: 530px;
   width: 100%;
-  margin-bottom: -500px; }
+  margin-bottom: -31.25rem; }
   .carousel .carousel-inner .carousel-item img {
     width: 100%;
     height: 100%;
-    filter: blur(5px); }
+    filter: brightness(40%); }

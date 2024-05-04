@@ -4,7 +4,6 @@ header{
     background-color: map-get($fondos, nav);
     position: sticky;
     top: 0;
-    margin-bottom: 1.25rem;
     z-index: 1000;
     nav{
         @include flex(row, space-between, center, none);
