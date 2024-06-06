@@ -1,35 +1,5 @@
 
-// let productosElegidos = document.querySelector(".productosElegidos");
-
-// let textoAlerta = document.createElement("p")
-// textoAlerta.innerText = "¡Tu producto se agregó con éxito!"
-// textoAlerta.classList.add("textoAlerta")
-
-// mostrarAlerta.appendChild(textoAlerta)
-
-
-
-// function agregarElementosCarrito(e){
-//     let boton = e.target
-    
-//     let producto = boton.closest(".comida-item, .bebida-item, .combo-item, .oferta-item");
-    
-//     if (producto) {
-//         let productoAgregado = document.createElement("div");
-        
-//         let imgCard = producto.querySelector(".imgCard").cloneNode(true);
-//         let productName = producto.querySelector(".productName").cloneNode(true);
-//         let productPrice = producto.querySelector(".productPrice").cloneNode(true);
-        
-//         productoAgregado.appendChild(imgCard);
-//         productoAgregado.appendChild(productName);
-//         productoAgregado.appendChild(productPrice);
-//         productosElegidos.appendChild(productoAgregado);
-//     }
-// }
-
-
-//!Alerta que debería funcionar
+// Alerta al agregar un producto al carrito
 let mostrarAlerta = document.querySelector("#contenedor-alerta")
 
 function alertaCarrito() {
@@ -144,6 +114,7 @@ let ofertas = [
     }
 ]
 
+// Despliego los objetos en pantalla, en formato de cards
 function mostrarComidas(){
     let comidasCards = document.querySelector("#comidas-cards");
     for(const comida of comidas){
@@ -225,7 +196,7 @@ document.querySelectorAll(".agregar-carrito").forEach(btn =>{
     })
 })
 
-
+// Preparo los productos agregados al carrito
 function comidaEnCarrito(productoID){
     let carritoString = sessionStorage.getItem("carrito");
     let carrito = carritoString ? JSON.parse(carritoString) : [];
@@ -310,6 +281,7 @@ function ofertaEnCarrito(productoID){
     sessionStorage.setItem("carrito", JSON.stringify(carrito))
     mostrarCarrito()
 }
+
 function eliminarProducto(productoID){
     let productosEnCarrito = JSON.parse(sessionStorage.getItem("carrito")) || []
     const indice = productosEnCarrito.findIndex(p => p.id === productoID);
