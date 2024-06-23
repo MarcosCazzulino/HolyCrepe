@@ -54,6 +54,13 @@ h2{
         background-color: map-get($fondos, nav);
     }
 }
+.swal2-title{
+    text-shadow: none;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
 h3{
     font-family: "Chela One", system-ui;
     font-weight: 400;

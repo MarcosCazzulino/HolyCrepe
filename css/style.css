@@ -48,6 +48,13 @@ h2 {
   h2::selection {
     background-color: #644E4E; }
 
+.swal2-title {
+  text-shadow: none;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white; }
+
 h3 {
   font-family: "Chela One", system-ui;
   font-weight: 400;
@@ -459,7 +466,7 @@ main .buyCart {
           padding-left: 10px; }
         main .buyCart .comidas-cards .card .card-product h3, main .buyCart .bebidas-cards .card .card-product h3, main .buyCart .combos-cards .card .card-product h3, main .buyCart .ofertas-cards .card .card-product h3 {
           font-size: 1.5rem; }
-        main .buyCart .comidas-cards .card .card-product .eliminar-producto, main .buyCart .bebidas-cards .card .card-product .eliminar-producto, main .buyCart .combos-cards .card .card-product .eliminar-producto, main .buyCart .ofertas-cards .card .card-product .eliminar-producto {
+        main .buyCart .comidas-cards .card .card-product .eliminar-producto, main .buyCart .comidas-cards .card .card-product .eliminar-todo, main .buyCart .bebidas-cards .card .card-product .eliminar-producto, main .buyCart .bebidas-cards .card .card-product .eliminar-todo, main .buyCart .combos-cards .card .card-product .eliminar-producto, main .buyCart .combos-cards .card .card-product .eliminar-todo, main .buyCart .ofertas-cards .card .card-product .eliminar-producto, main .buyCart .ofertas-cards .card .card-product .eliminar-todo {
           border: none;
           padding: 3px 12px;
           border-radius: .3125rem;
@@ -468,9 +475,11 @@ main .buyCart {
           text-transform: uppercase;
           background-color: rgba(209, 52, 52, 0.897);
           margin: 0 1.25rem; }
-          main .buyCart .comidas-cards .card .card-product .eliminar-producto:hover, main .buyCart .bebidas-cards .card .card-product .eliminar-producto:hover, main .buyCart .combos-cards .card .card-product .eliminar-producto:hover, main .buyCart .ofertas-cards .card .card-product .eliminar-producto:hover {
+          main .buyCart .comidas-cards .card .card-product .eliminar-producto:hover, main .buyCart .comidas-cards .card .card-product .eliminar-todo:hover, main .buyCart .bebidas-cards .card .card-product .eliminar-producto:hover, main .buyCart .bebidas-cards .card .card-product .eliminar-todo:hover, main .buyCart .combos-cards .card .card-product .eliminar-producto:hover, main .buyCart .combos-cards .card .card-product .eliminar-todo:hover, main .buyCart .ofertas-cards .card .card-product .eliminar-producto:hover, main .buyCart .ofertas-cards .card .card-product .eliminar-todo:hover {
             box-shadow: 0px 0px 10px rgba(231, 2, 2, 0.897);
             transition: .2s ease; }
+        main .buyCart .comidas-cards .card .card-product .eliminar-todo, main .buyCart .bebidas-cards .card .card-product .eliminar-todo, main .buyCart .combos-cards .card .card-product .eliminar-todo, main .buyCart .ofertas-cards .card .card-product .eliminar-todo {
+          margin-left: -10px; }
   main .buyCart .confirmar-compra {
     display: none;
     border: none;
@@ -485,6 +494,19 @@ main .buyCart {
       background-color: #2e8633;
       color: white;
       transition: all .5s ease; }
+
+.swal2-popup {
+  background-color: #644E4E; }
+  .swal2-popup .swal2-input {
+    background-color: #ebebeb;
+    border: none;
+    box-shadow: none; }
+    .swal2-popup .swal2-input::placeholder {
+      color: black;
+      font-weight: 450; }
+  .swal2-popup .swal2-actions .swal2-confirm {
+    background-color: #FFC68F;
+    color: black; }
 
 footer {
   display: flex;

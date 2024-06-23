@@ -1,0 +1,106 @@
+{
+    "comidas": [
+        {
+            "id": "c1111",
+            "nombre": "Banano Rey",
+            "precio": 2.50,
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "c2222", 
+            "nombre": "Fresa Reina", 
+            "precio": 3.00, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "c3333", 
+            "nombre": "Mixta Monarca", 
+            "precio": 3.50, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "c4444", 
+            "nombre": "Tostado", 
+            "precio": 2.00, 
+            "img": "./assets/img/imgcard.png"
+        }
+    ],
+    "bebidas": [
+        {
+            "id": "b1111", 
+            "nombre": "Café", 
+            "precio": 1.00, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "b2222", 
+            "nombre": "Capuchino", 
+            "precio": 1.50, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "b3333", 
+            "nombre": "Frapuchino", 
+            "precio": 2.00, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "b4444", 
+            "nombre": "Batido", 
+            "precio": 2.00, 
+            "img": "./assets/img/imgcard.png"
+        }
+    ],
+    "combos": [
+        {
+            "id": "cb1111", 
+            "nombre": "Café + Fresa Reina", 
+            "precio": 3.20, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "cb2222", 
+            "nombre": "Capuchino + Banano R.",
+            "precio": 3.75, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "cb3333", 
+            "nombre": "Frapuchino + Mixta M", 
+            "precio": 5.00, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "cb4444", 
+            "nombre": "Tostado + Batido", 
+            "precio": 3.25, 
+            "img": "./assets/img/imgcard.png"
+        }
+    ],
+    "ofertas": [
+        {
+            "id": "o1111", 
+            "nombre": "Capuchino + 2 B.R", 
+            "precio": 5.00, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "o2222", 
+            "nombre": "Café + 1 B.R + 1 F.R",
+            "precio": 5.20, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "o3333", 
+            "nombre": "Frapuchino + 2 M.M", 
+            "precio": 7.80, 
+            "img": "./assets/img/imgcard.png"
+        },
+        {
+            "id": "o4444", 
+            "nombre": "2 Batido + B.R", 
+            "precio": 3.00, 
+            "img": "./assets/img/imgcard.png"
+        }
+    ]
+}
